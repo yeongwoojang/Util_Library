@@ -7,5 +7,9 @@ class LogUtil {
         fun info(s : String,msg : String){
             Log.i(s,msg)
         }
+
+        fun debug(s : String, msg : String){
+            Log.d(s,msg)
+        }
     }
 }
