@@ -2,22 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bg_general_popup"
-    android:layout_width="280dp"
-    android:layout_height="140dp"
-
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="300dp"
+    android:minHeight="300dp"
     >
 
     <TextView
         android:id="@+id/general_tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="TITLE"
+        android:text="TITLE"
         android:textSize="17sp"
         android:textColor="@color/black"
         android:gravity="center"
@@ -31,7 +27,7 @@
         android:id="@+id/general_tv_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="DESC"
+        android:text="DESC"
         android:textColor="@color/black"
         android:gravity="center"
         android:layout_marginTop="30dp"

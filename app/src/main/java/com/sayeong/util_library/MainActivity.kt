@@ -6,8 +6,8 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.RequiresApi
-import com.sayeong.util_library.util.LogUtil
 import com.sayeong.util_library.util.PopupUtil
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
@@ -16,11 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val manager = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        val info : List<ActivityManager.AppTask> =  manager.appTasks
-        for(task in info){
-            LogUtil.info("TAG","TopActivity : ${task.taskInfo.topActivity?.className}")
-            PopupUtil.getInstance(this).test(R.id.test,activity = this)
+        bt_test.setOnClickListener {
+            PopupUtil.getInstance(this).showPopup(R.id.test,activity = this)
         }
-//        PopupUtil.getInstance(this).showPopup()
     }
 }
