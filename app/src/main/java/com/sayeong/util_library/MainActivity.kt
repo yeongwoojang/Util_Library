@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.annotation.RequiresApi
 import com.sayeong.util_library.util.PopupUtil
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,5 +21,6 @@ class MainActivity : AppCompatActivity() {
         bt_test.setOnClickListener {
             PopupUtil.getInstance(this).showPopup(R.id.test,activity = this)
         }
+
     }
 }

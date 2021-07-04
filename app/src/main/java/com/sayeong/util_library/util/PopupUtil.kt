@@ -7,6 +7,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.LinearLayout
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -48,6 +50,8 @@ class PopupUtil constructor(context: Context?) {
         popupView?.addView(popupItemView)
         view.removeAllViews()
         view.addView(popupView)
+        val animation : Animation = AnimationUtils.loadAnimation(mContext,R.anim.zoom_in)
+        view.startAnimation(animation)
 
     }
 
